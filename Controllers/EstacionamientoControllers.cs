@@ -10,15 +10,15 @@ namespace ElParqueito.Controllers
 
 [Route("[controller]")]
 
- public class EstacionamientoController : ControllerBase 
+ public class EstacionamientosController : ControllerBase 
  {
 
 
-    private EstacionamientoRepositories EstacionamientoRepository;
+    private EstacionamientosRepositories EstacionamientoRepository;
 
-    public EstacionamientoController()
+    public EstacionamientosController()
     {
-      EstacionamientoRepository = new EstacionamientoRepository();
+      EstacionamientoRepository = new EstacionamientosRepositories();
     }   
      private List<Estacionamiento> Estacionamientos = new List<Estacionamiento>(){
 
@@ -28,16 +28,16 @@ namespace ElParqueito.Controllers
      [HttpGet]
      public List<Estacionamiento> GetEstacionamiento(){
 
-     return vehiculosRepository.ObtenerEstacionamiento();
+     return EstacionamientoRepository.ObtenerEstacionamientos();
    }
  
    [HttpGet] 
    [Route("{id}")]
    
-     public Vehiculo GetEstacionamiento([FromRoute ]int id)
+     public Estacionamiento GetEstacionamiento([FromRoute ]int id)
   {
-    var Estacionamiento =EstacionamientoRepository.ObtenerEstacionamiento(id);
-    return Estacionamiento;
+    var estacionamiento =EstacionamientoRepository.ObtenerEstacionamiento(id);
+    return estacionamiento;
   }
 
  [HttpPost]
@@ -56,7 +56,7 @@ namespace ElParqueito.Controllers
   public string DeleteEstacionamiento ([FromQuery] int id)
   {
     var estacionamiento = EstacionamientoRepository.DeleteEstacionamiento(id);
-    return "Se eliminó el vehiculo" +"  "+ estacionamineto.numeroPosicion;
+    return "Se eliminó el vehiculo" +"  "+ estacionamiento.numeroPosicion;
   }
  }
 }

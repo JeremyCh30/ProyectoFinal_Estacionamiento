@@ -3,14 +3,16 @@ using System;
 using ElParqueito;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ElParqueito.Migrations
 {
     [DbContext(typeof(CadenaDeParqueosContext))]
-    partial class CadenaDeParqueosContextModelSnapshot : ModelSnapshot
+    [Migration("20210313222941_tblEstacionamientos")]
+    partial class tblEstacionamientos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

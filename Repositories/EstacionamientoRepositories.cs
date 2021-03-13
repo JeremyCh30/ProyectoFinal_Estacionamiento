@@ -4,44 +4,48 @@ using System.Linq;
 
 namespace ElParqueito.Repositories
 {
-    public class EstacionamientoRepositories 
+    public class EstacionamientosRepositories 
     {
         private CadenaDeParqueosContext db;
-        public EstacionamientoRepositories()
+        public EstacionamientosRepositories()
         {
             db = new CadenaDeParqueosContext();
         }
-         public List<Estacionamiento> ObtenerEstacionamiento()
+         public List<Estacionamiento> ObtenerEstacionamientos()
         {
         var estacionamiento = db.Estacionamientos.ToList();
         db.SaveChanges();
         return estacionamiento;
         }
+
+        public Estacionamiento ObtenerEstacionamiento(int id)
+        {
+            var resultado= db.Estacionamientos.Find(id);
+            db.SaveChanges();
+            return resultado;
+        }
+
+
          public int AgregarEstacionamiento(Estacionamiento nuevoEstacionamiento)
          {
              var resultado =db.Estacionamientos.Add(nuevoEstacionamiento);
              db.SaveChanges();
              return resultado.Entity.Id;
          }
-          public Estacionamiento ObtenerEstacionamiento(int id)
-         {
-            var resultado= db.Estacionamiento.Find(id);
-            db.SaveChanges();
-            return resultado;
-         }
+         
           public Estacionamiento ActualizarEstacionamiento (Estacionamiento nuevoEstacionamiento)
          {
-           var EstacionamientoActual =db.Estacionamiento.Find(nuevoEstacionamiento.Id);
-           db.Estacionamiento.Remove(EstacionamientoActual);
-           db.Estacionamiento.Add(nuevoEstacionamiento);
+           var EstacionamientoActual =db.Estacionamientos.Find(nuevoEstacionamiento.Id);
+           db.Estacionamientos.Remove(EstacionamientoActual);
+           db.Estacionamientos.Add(nuevoEstacionamiento);
            db.SaveChanges();
            return nuevoEstacionamiento;
 
          }
          public Estacionamiento DeleteEstacionamiento (int id)
          {
-          var EstacionamientoActual =db.Estacionamiento.Find(id);
-          var resultado = db.Estacionamiento.Remove(EstacionamientoActual);
+          var EstacionamientoActual =db.Estacionamientos.Find(id);
+          var resultado = db.Estacionamientos.Remove(EstacionamientoActual);
           db.SaveChanges();
           return resultado.Entity;
          }
