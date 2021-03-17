@@ -2,6 +2,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Collections.Generic;
 using ElParqueito.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElParqueito.Repositories
 {
@@ -14,7 +15,7 @@ namespace ElParqueito.Repositories
         }
         public List<Estacionamiento> ObtenerEstacionamientos()
         {
-        var estacionamiento = db.Estacionamientos.ToList();
+        var estacionamiento = db.Estacionamientos.Include(x => x.vehiculo).ToList();
         db.SaveChanges();
         return estacionamiento;
         }
