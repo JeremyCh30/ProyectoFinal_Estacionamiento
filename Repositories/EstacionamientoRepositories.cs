@@ -23,7 +23,6 @@ namespace ElParqueito.Repositories
         public Estacionamiento ObtenerEstacionamiento(int id)
         {
             var resultado= db.Estacionamientos.Find(id);
-            System.Console.WriteLine(resultado);
             db.SaveChanges();
             return resultado;
         }
