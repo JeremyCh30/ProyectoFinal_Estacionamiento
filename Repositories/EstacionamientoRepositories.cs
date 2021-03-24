@@ -1,3 +1,4 @@
+using System.Runtime.ConstrainedExecution;
 using System.Collections.Generic;
 using ElParqueito.Models;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace ElParqueito.Repositories
         {
             db = new CadenaDeParqueosContext();
         }
-         public List<Estacionamiento> ObtenerEstacionamientos()
+        public List<Estacionamiento> ObtenerEstacionamientos()
         {
         var estacionamiento = db.Estacionamientos.Include(x => x.vehiculo).ToList();
         db.SaveChanges();
@@ -27,28 +28,29 @@ namespace ElParqueito.Repositories
         }
 
 
-         public int AgregarEstacionamiento(Estacionamiento nuevoEstacionamiento)
-         {
+        public int AgregarEstacionamiento(Estacionamiento nuevoEstacionamiento)
+        {
              var resultado =db.Estacionamientos.Add(nuevoEstacionamiento);
              db.SaveChanges();
              return resultado.Entity.Id;
-         }
+        }
          
-          public Estacionamiento ActualizarEstacionamiento (Estacionamiento nuevoEstacionamiento)
-         {
+        public Estacionamiento ActualizarEstacionamiento (Estacionamiento nuevoEstacionamiento)
+        {
            var EstacionamientoActual =db.Estacionamientos.Find(nuevoEstacionamiento.Id);
            db.Estacionamientos.Remove(EstacionamientoActual);
            db.Estacionamientos.Add(nuevoEstacionamiento);
            db.SaveChanges();
            return nuevoEstacionamiento;
 
-         }
-         public Estacionamiento DeleteEstacionamiento (int id)
-         {
+        }
+        public Estacionamiento DeleteEstacionamiento (int id)
+        {
           var EstacionamientoActual =db.Estacionamientos.Find(id);
           var resultado = db.Estacionamientos.Remove(EstacionamientoActual);
           db.SaveChanges();
           return resultado.Entity;
-         }
+        }
+
     }   
 }
