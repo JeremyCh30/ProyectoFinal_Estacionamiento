@@ -34,7 +34,7 @@ namespace ElParqueito.Controllers
    [HttpGet] 
    [Route("{id}")]
    
-     public Vehiculo GetVehiculo([FromRoute ]int id)
+  public Vehiculo GetVehiculo([FromRoute]int id)
   {
 
     var Vehiculo =vehiculosRepository.ObtenerVehiculo(id);
@@ -47,7 +47,7 @@ namespace ElParqueito.Controllers
   public string Agregarvehiculo ([FromBody] Vehiculo nuevoVehiculo)
   {
     var resultado = vehiculosRepository.AgregarVehiculos(nuevoVehiculo);
-    return "Producto agregado ID:" + " "+ resultado ;
+    return "Vehiculo agregado ID:" + " "+ resultado ;
 
   }
   
