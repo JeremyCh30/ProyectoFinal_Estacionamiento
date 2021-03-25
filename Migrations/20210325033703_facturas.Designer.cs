@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElParqueito.Migrations
 {
     [DbContext(typeof(CadenaDeParqueosContext))]
-    [Migration("20210319235353_agregandofactura")]
-    partial class agregandofactura
+    [Migration("20210325033703_facturas")]
+    partial class facturas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,12 +55,12 @@ namespace ElParqueito.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("informacionParqueoId")
+                    b.Property<int?>("estacionamientoId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("informacionParqueoId");
+                    b.HasIndex("estacionamientoId");
 
                     b.ToTable("facturas");
                 });
@@ -93,11 +93,11 @@ namespace ElParqueito.Migrations
 
             modelBuilder.Entity("ElParqueito.Models.Factura", b =>
                 {
-                    b.HasOne("ElParqueito.Models.Estacionamiento", "informacionParqueo")
+                    b.HasOne("ElParqueito.Models.Estacionamiento", "estacionamiento")
                         .WithMany()
-                        .HasForeignKey("informacionParqueoId");
+                        .HasForeignKey("estacionamientoId");
 
-                    b.Navigation("informacionParqueo");
+                    b.Navigation("estacionamiento");
                 });
 #pragma warning restore 612, 618
         }

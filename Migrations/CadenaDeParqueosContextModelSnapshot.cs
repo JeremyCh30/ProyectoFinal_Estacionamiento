@@ -44,6 +44,25 @@ namespace ElParqueito.Migrations
                     b.ToTable("Estacionamientos");
                 });
 
+            modelBuilder.Entity("ElParqueito.Models.Factura", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("estacionamientoId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("estacionamientoId");
+
+                    b.ToTable("facturas");
+                });
+
             modelBuilder.Entity("ElParqueito.Models.Vehiculo", b =>
                 {
                     b.Property<int>("Id")
@@ -68,6 +87,15 @@ namespace ElParqueito.Migrations
                         .HasForeignKey("vehiculoId");
 
                     b.Navigation("vehiculo");
+                });
+
+            modelBuilder.Entity("ElParqueito.Models.Factura", b =>
+                {
+                    b.HasOne("ElParqueito.Models.Estacionamiento", "estacionamiento")
+                        .WithMany()
+                        .HasForeignKey("estacionamientoId");
+
+                    b.Navigation("estacionamiento");
                 });
 #pragma warning restore 612, 618
         }

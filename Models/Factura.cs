@@ -7,12 +7,14 @@ namespace ElParqueito.Models
 
         public string Telefono{get; set;}
 
-        public Estacionamiento informacionParqueo{get; set;}
+        public Estacionamiento estacionamiento{get; set;}
 
-
-        public Factura(int nuevoId, string nuevoTelefono){
+        
+        public Factura(int nuevoId, string nuevoTelefono,Estacionamiento nuevoEstacinaminto ){
             Id = nuevoId;
             Telefono = nuevoTelefono;
+           
+            estacionamiento = nuevoEstacinaminto;
         }
         
         public Factura()
