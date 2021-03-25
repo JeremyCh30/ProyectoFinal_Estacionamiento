@@ -10,11 +10,10 @@ namespace ElParqueito.Models
         public Estacionamiento estacionamiento{get; set;}
 
         
-        public Factura(int nuevoId, string nuevoTelefono,Estacionamiento nuevoEstacinaminto ){
+        public Factura(int nuevoId, string nuevoTelefono,Estacionamiento nuevoEstacinamiento){
             Id = nuevoId;
             Telefono = nuevoTelefono;
-           
-            estacionamiento = nuevoEstacinaminto;
+            estacionamiento = nuevoEstacinamiento;
         }
         
         public Factura()

@@ -56,7 +56,7 @@ namespace ElParqueito.Controllers
   public string DeleteEstacionamiento ([FromQuery] int id)
   {
     var estacionamiento = EstacionamientoRepository.DeleteEstacionamiento(id);
-    return "Se eliminó el vehiculo" +"  "+ estacionamiento.numeroPosicion;
+    return "Se eliminó el Lugar de Estacionamento" +"  "+ estacionamiento.numeroPosicion;
   }
  }
 }
