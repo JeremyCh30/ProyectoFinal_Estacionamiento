@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "a2f9da4c-9a93-431d-a3c5-a5fcd1619e4a",
+		"name": "El Parqueito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener una lista de todos los lugares de estacionamiento",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Estacionamientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Estacionamientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una lista de un lugar de estacionamiento por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Estacionamientos/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Estacionamientos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar un nuevo lugar de estacionamiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"horaDeEntrada\": 4,\r\n    \"numeroPosicion\": 6,\r\n    \"vehiculo\": {\r\n        \"placa\": \"KDH-836\",\r\n        \"tipo\": \"Carro\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Estacionamientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Estacionamientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un lugar de estacionamiento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"horaDeEntrada\": 4,\r\n    \"numeroPosicion\": 6,\r\n    \"vehiculo\": {\r\n        \"placa\": \"493603\",\r\n        \"tipo\": \"Moto\"\r\n    },\r\n    \"horaDeSalida\": 6,\r\n    \"cobro\": 2000\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Estacionamientos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Estacionamientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Lugar de Estacionamiento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Estacionamientos?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Estacionamientos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener lista de todos los vehiculos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placa\": \"392752\",\r\n    \"tipo\": \"Moto\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Vehiculos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Vehiculos"
+					]
+				},
+				"description": "`https://localhost:5001/Vehiculos`."
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un vehiculo por un ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Vehiculos/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Vehiculos",
+						""
+					]
+				},
+				"description": "'https://localhost:5001/Vehiculos/3'"
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar un nuevo vehiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placa\": \"342462\",\r\n    \"tipo\": \"Moto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Vehiculos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Vehiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un vehiculo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":5,\r\n    \"placa\": \"394621\",\r\n    \"tipo\": \"Moto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Vehiculos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Vehiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un vehiculo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Vehiculos?id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Vehiculos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un lista de todas las Facturas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Facturas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Facturas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una Factura por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Facturas/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Facturas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar una Factura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telefono\": \"71563020\",\r\n    \"estacionamiento\": {\r\n        \"horaDeEntrada\": 10,\r\n        \"numeroPosicion\": 13 ,\r\n        \"vehiculo\": {\r\n            \"placa\": \"7612331\",\r\n            \"tipo\": \"carro\"\r\n        },\r\n        \"horaDeSalida\": 12 ,\r\n        \"cobro\": 3000\r\n    }\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/Facturas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Facturas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
