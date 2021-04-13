@@ -12,6 +12,8 @@ namespace ElParqueito
 
         public DbSet<Factura> facturas { get; set; }
 
+        public DbSet<Administrador> Administradores { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=cadenaDeParqueos.db");
 
