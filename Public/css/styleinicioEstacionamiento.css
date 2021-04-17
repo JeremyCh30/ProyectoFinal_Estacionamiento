@@ -1,0 +1,174 @@
+body{
+    width: 1366px;
+    max-width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    background-color:#dfd9d9;
+    height: 50px;
+    box-sizing: border-box;
+}
+.logo{
+    width: 125px;
+    alt: 70px;
+    margin-top: -4px;
+}
+.fotoPerfil{
+    width: 45px;
+    margin-left: 93%;
+    margin-top: -52px;
+}
+
+#nombre{
+    float:right;
+}
+
+header nav{
+    width:55%;
+    float: right;
+    margin-right: 0px;
+    padding: 17px;
+}
+header nav a{
+    /*Cambiar los colores según los propuestos*/
+    color: #000000;
+    text-decoration: none;
+    margin-left: 6px;
+}
+header nav a:hover{
+    /*Cambiar los colores según los propuestos*/
+    color: rgb(0,0,0,0.5);
+}
+#inptBusqueda{
+    margin-top: -13px;
+    height:20px;
+    width: 220px;
+    border: 1.7px solid;
+}
+.filtroBusqueda{
+    height: 11px;
+    width: 30px;
+    border: 1.7px solid;
+    background-color: #ffffff;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px;
+    margin-top: -2.8px;
+    margin-left: -44px;
+}
+header i{
+    font-size: 22px;
+    position: absolute;
+    margin-left: -34px;
+    margin-top: -1px;
+}
+header i:hover{
+    color: rgba(0, 0, 0, 0.8)
+}
+main h1{
+    font-size: 26px;
+    margin-top: 40px;
+    margin-left: 43%;
+    margin-bottom: 50px;
+}
+.contenedor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.contenedor .tarjeta{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.contenedor .tarjeta i{
+    font-size: 150px;
+    margin-top: 25px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.contenedor .tarjeta:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -90px;
+}
+
+.contenedor .ocup{
+    background-color: #C30404;
+}
+
+.contenedor .ocup:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(231, 20, 20, 0.5);
+    background-color:  rgba(231, 20, 20, 0.9);
+}
+
+.contenedor .disp{
+    background-color: #008400;
+}
+
+.contenedor .disp:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(33, 233, 50, 0.5);
+    background-color: #00bf00;
+}
+
+/*Inicio de estilos del footer*/
+footer{
+    background-color: #dfd9d9;
+    width: 100;
+    height: 75px;
+    box-sizing: border-box
+    
+}
+
+.footerLeft{
+    width: 55%;
+    float: left;
+    border-right: 1px solid #000000;
+}
+#derechos{
+    float: left;
+    margin-left: 20px;
+}
+#derechos h3{
+    margin-bottom: 20px;
+}
+#acercaDeNosotros{
+    width: 40%;
+    float: right;
+    text-align: center
+}
+footer a{
+    color: #000000;
+}
+.footerRight{
+    display: inline-block;
+    /*float: left;*/
+}
+#nuestrasRedes{
+    margin-left: 20px;
+}
+#nuestrasRedes h3{
+    margin-bottom: 11px;
+}
+#nuestrasRedes i{
+    margin-right: 20px;
+    font-size: 30px;
+}
+/*Fin de estilos del footer*/
