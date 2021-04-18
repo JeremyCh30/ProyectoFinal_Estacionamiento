@@ -1182,51 +1182,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" id="tblEstacionamientos">
                                 <thead>
                                     <tr>
+                                        <th>Lugar</th>
                                         <th>Placa de vehiculo</th>
                                         <th>Vehiculo</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>abc-123</td>
-                                        <td>moto</td>
-                                        <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>543231</td>
-                                        <td>Carro</td>
-                                        <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>345-fed</td>
-                                        <td>moto</td>
-                                        <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
-                                        </td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -1245,36 +1211,20 @@
                             <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
                                 <h2 class="h1 text-white" id="next">
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Registro </font>
+                                        <font style="vertical-align: inherit;">Listado </font>
                                     </font><span class="text-teal-lighter"><strong>
                                             <font style="vertical-align: inherit;">
                                                 <font style="vertical-align: inherit;">de</font>
                                             </font>
                                         </strong></span>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"> campos</font>
+                                        <font style="vertical-align: inherit;">Vehículos</font>
                                     </font>
                                 </h2>
                                 <div class="lead">
                                     <p>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Aquí le mostramos el registro de
-                                                campos, en el cual se incluye los datos de los vehículos anteriores, se
-                                                muestra la hora de ingreso al estacionamiento.</font>
-                                        </font>
-                                    </p>
-                                    <p>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Si el vehículo ya salió del parqueo,
-                                                se muestra la hora de salida y junto a esta última se muestra el cobro.
-                                            </font>
-                                        </font>
-                                    </p>
-                                    <p>
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Puede agregar campos con la condición
-                                                de definir lo siguiente: Posición(Campo en el estacionamiento), hora de
-                                                entrada, placa.</font>
+                                            <font style="vertical-align: inherit;">Aquí le mostramos el listado de vehiculos, en el cual se incluye los datos de los vehículos que en algun momento ocuparon el parqueo, esto como reporte general por lo cual apareceran incluso los que no esten utilizando el parqueo en este momento</font>
                                         </font>
                                     </p>
                                 </div>
@@ -1296,69 +1246,44 @@
                             <div class="table-title">
                                 <div class="row">
                                     <div class="col-sm-8">
-                                        <h2>Vehículo</h2>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>
-                                            Agregar nuevo</button>
+                                        <h2>Vehículos</h2>
                                     </div>
                                 </div>
                             </div>
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" id="tblVehiculos">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Hora de entrada</th>
-                                        <th>Placa Vehiculo</th>
-                                        <th>Hora de salida</th>
-                                        <th>cobro</th>
-                                        <th>Acciones</th>
+                                        <th>Placa Vehículo</th>
+                                        <th>Tipo Vehiculo</th>
+                                        <th>Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>8:00 pm</td>
-                                        <th>abc-123</th>
-                                        <td>9:00 pm</td>
-                                        <th>$1000</th>
+                                        <td>abc-123</td>
+                                        <td>Carro</td>
                                         <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
+                                            <a class="delete" title="Delete" data-toggle="tooltip">
+                                                <i class="material-icons">&#xE872;</i>
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td>4:00 pm</td>
-                                        <th>543231</th>
-                                        <td>6:00 pm</td>
-                                        <th>$2000</th>
+                                        <td>543231</td>
+                                        <td>Moto</td>
                                         <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
+                                            <a class="delete" title="Delete" data-toggle="tooltip">
+                                                <i class="material-icons">&#xE872;</i>
+                                            </a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td>10:00 pm</td>
-                                        <th>345-fed</th>
-                                        <td>1:00 am</td>
-                                        <th>$3000</th>
+                                        <td>345-fed</td>
+                                        <td>Carro</td>
                                         <td>
-                                            <a class="add" title="Add" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE03B;</i></a>
-                                            <a class="edit" title="Edit" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE254;</i></a>
-                                            <a class="delete" title="Delete" data-toggle="tooltip"><i
-                                                    class="material-icons">&#xE872;</i></a>
+                                            <a class="delete" title="Delete" data-toggle="tooltip">
+                                                <i class="material-icons">&#xE872;</i>
+                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -1473,6 +1398,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
         <script src="js/btnReturnTop.js"></script>
+        <script src="js/servicioAdmin.js"></script>
     </main>
 </body>
 
