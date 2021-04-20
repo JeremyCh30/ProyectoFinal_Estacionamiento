@@ -1018,7 +1018,7 @@
             cursor: pointer;
             display: inline-block;
             margin: 0 5px;
-            min-width: 25px;
+            min-width: 10px;
         }
 
         table.table td a.add {
@@ -1071,7 +1071,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-custom navbar-custom fixed-top bg-custom">
             <div class="container">
-                <a class="navbar-brand" href="espaniol.html">
+                <a class="navbar-brand" href="ingles.html">
                     <img src="C:\Users\wilbe\OneDrive\Escritorio\Nueva carpeta\FrontEnd_Estacionamiento\parkingRey\imagenes/KND.png"
                         class="logo" width="105" height="40" alt="Ir a la Página de Inicio"
                         title="Ir a la Página de Inicio">
@@ -1084,11 +1084,11 @@
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="espaniol.html">Inicio<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="espaniol.html">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html" hreflang="en">
-                                Ingles</a>
+                            <a class="nav-link" href="Admin.html" hreflang="en">
+                                Español</a>
                         </li>
                     </ul>
 
@@ -1104,18 +1104,18 @@
         <!-- InstanceBeginEditable name="content" -->
         <div class="heroWrapper">
             <div class="container">
-                <h1><span class="parque"><strong>Bienvenido Administrador</strong></span></h1>
+                <h1><span class="parque"><strong>Welcome Administrator</strong></span></h1>
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center parque">
-                        <p class="lead el">Gestionar el sistema Parking KND desde esta página, nuestro objetivo es simplificar el uso del sistema, a continuación damos instrucciones.</p>
+                        <p class="lead el">Manage the Parking KND system from this page, our goal is to simplify the use of the system, below we give instructions.</p>
                         <div class="row text-center">
                             <div class="col-md-6">
                                 <a class="btn-cta btn-cta-black mt-4 mx-auto" href="#next"><i
-                                        class="fas fa-chevron-circle-down"></i> Registro</a>
+                                        class="fas fa-chevron-circle-down"></i> Registry</a>
                             </div>
                             <div class="col-md-6">
-                                <a class="btn-cta btn-cta-black mt-4 mx-auto" href="adminIngles.html"><i
-                                        class="fas fa-chevron-circle-right"></i> Ingles</a>
+                                <a class="btn-cta btn-cta-black mt-4 mx-auto" href="Admin.html"><i
+                                        class="fas fa-chevron-circle-right"></i> Español</a>
                             </div>
                         </div>
                     </div>
@@ -1132,29 +1132,25 @@
                             <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
                                 <h2 class="h1 text-white" id="next">
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Registro </font>
+                                        <font style="vertical-align: inherit;">Registry </font>
                                     </font><span class="text-teal-lighter"><strong>
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">de</font>
+                                                <font style="vertical-align: inherit;">of</font>
                                             </font>
                                         </strong></span>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;"> vehiculos</font>
+                                        <font style="vertical-align: inherit;"> parking</font>
                                     </font>
                                 </h2>
                                 <div class="lead">
                                     <p>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Aquí le mostramos el registro de
-                                                vehiculos, con la placa y el tipo de vehículo.</font>
+                                            <font style="vertical-align: inherit;">Here we show you the vehicle registration, with the license plate and the type of vehicle.</font>
                                         </font>
                                     </p>
                                     <p>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Puede agregar un vehículo con la
-                                                condición de definir la placa junto al tipo(Ya sea un carro o una moto).
-                                                De la misma forma puede editar las propiedades de este registro al igual
-                                                que eliminarlo.</font>
+                                            <font style="vertical-align: inherit;">You can add a vehicle with the condition of defining the plate next to the type (Either a car or a motorcycle). In the same way, you can edit the properties of this record as well as delete it.</font>
                                         </font>
                                     </p>
                                 </div>
@@ -1177,21 +1173,17 @@
                             <div class="table-title">
                                 <div class="row">
                                     <div class="col-sm-8">
-                                        <h2>Estacionamiento</h2>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i>
-                                            Agregar nuevo</button>
+                                        <h2>Parking</h2>
                                     </div>
                                 </div>
                             </div>
                             <table class="table table-bordered" id="tblEstacionamientos">
                                 <thead>
                                     <tr>
-                                        <th>Lugar</th>
-                                        <th>Placa de vehiculo</th>
-                                        <th>Vehiculo</th>
-                                        <th>Acciones</th>
+                                        <th>Position</th>
+                                        <th>Plate of vehicle</th>
+                                        <th>Vehicle</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1214,21 +1206,20 @@
                             <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
                                 <h2 class="h1 text-white" id="next">
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Listado </font>
+                                        <font style="vertical-align: inherit;">Registry </font>
                                     </font><span class="text-teal-lighter"><strong>
                                             <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">de</font>
+                                                <font style="vertical-align: inherit;">of</font>
                                             </font>
                                         </strong></span>
                                     <font style="vertical-align: inherit;">
-                                        <font style="vertical-align: inherit;">Vehículos</font>
+                                        <font style="vertical-align: inherit;">Vehicles</font>
                                     </font>
                                 </h2>
                                 <div class="lead">
                                     <p>
                                         <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Aquí le mostramos el listado de vehiculos, en el cual se incluye los datos de los vehículos que en están ocupando el espacio en el parqueo, esto como reporte general de los vehículos en la propiedad</font>
-                                        </font>
+                                        <font style = "vertical-align: inherit;"> Here we show you the list of vehicles, which includes the data of the vehicles that at some point occupied the parking lot, this as a general report for which even those that are not using the parking lot at this time </font>                                        </font>
                                     </p>
                                 </div>
                             </div>
@@ -1256,9 +1247,9 @@
                             <table class="table table-bordered" id="tblVehiculos">
                                 <thead>
                                     <tr>
-                                        <th>Placa Vehículo</th>
-                                        <th>Tipo Vehiculo</th>
-                                        <th>Acción</th>
+                                        <th>Plate of vehicles</th>
+                                        <th>Type of vehicle</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1270,91 +1261,105 @@
                 </div>
             </div>
         </section>
-        <footer class="footer" itemscope="" itemtype="">
-            <div class="footer-map">
-                <div class="container">
-                    <div class="row footer-box mb-3">
-                        <div class="col-sm-12 col-md-6 pb-4">
-                            <h5>Menu</h5>
-                            <div class="row">
-                                <div class="col-sm-6 col-md-12 col-lg-5">
-                                    <ul class="my-0">
-                                        <li><a href="ingles.html"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Inicio</a></li>
-                                        <li><a href=""><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Sesión de administrador</a></li>
-                                        <li><a href=""><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Sesión de usuario</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6 col-md-12 col-lg-7">
-                                    <ul class="my-0">
-                                        <h5>Equipo de desarrollo</h5>
-                                        <li><a href="page: Dr Placer"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Axel Mondragon </a></li>
-                                        <li><a href="page: Duromi69"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Daniel Aguero</a></li>
-                                        <li><a href="page: ChaloMD8"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Gonzalo Morales</a></li>
-                                        <li><a href="page: XxAlexBrxX"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Jeremy Briones</a></li>
-                                        <li><a href="page: ReyYR02"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> Reymond Rodríguez</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 pb-4">
-                            <h5>KND Parking</h5>
-                            <div class="row">
-                                <div class="col-sm-6 col-md-12 col-lg-5">
-                                    <div class="media mb-3">
-                                        <i class="fas fa-phone fa-lg fa-fw" aria-hidden="true"></i>
-                                        <div class="pl-2">
-                                            <p class="media-body">
-                                                <strong class="d-block">Teléfono</strong>
-                                                <span itemprop="telephone"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i> <a href="tel:+506-7203-4492">+506-7203-4492</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-        
-                                    <div class="media mb-3">
-                                        <i class="text-success fab fa-whatsapp fa-lg fa-fw" aria-hidden="true"></i>
-                                        <div class="pl-2">
-                                            <p class="media-body mb-2">
-                                                <strong class="d-block">Whatsapp</strong>
-                                                <i class="fas fa-chevron-circle-right" aria-hidden="true"></i> <a href="https://api.whatsapp.com/send?phone=50672034492" target="_blank">50672034492</a>
-                                            </p>
-                                        </div>
-                                    </div>
-        
-                                    <div class="media mb-3">
-                                        <i class="fas fa-exchange-alt fa-lg fa-fw" aria-hidden="true"></i>
-                                        <div class="pl-2">
-                                            <p class="media-body mb-2">
-                                                <strong class="d-block"> Precio</strong>
-                                                Motorcycle: ₡750.00 / US$<br>
-                                                Buying: ₡1000.00 / US$
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-sm-6 col-md-12 col-lg-7">
-                                    <div class="media mb-3">
-                                        <i class="fas fa-map-marker-alt fa-lg fa-fw" aria-hidden="true"></i>
-                                        <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                                            <div class="pl-2">
-                                                <p class="media-body mb-2">
-                                                    <strong class="d-block">Location</strong>
-                                                    <span itemprop="streetAddress">
-                                                        San José<br>Costa Rica	
-                                        
-                                                    </span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>	<!-- Return top================================================== -->
-            <a href="javascript:" id="return-to-top" style="display: none;"><i class="fas fa-chevron-up" aria-hidden="true"></i></a>
-        </footer>
+        <footer class="footer" itemscope="" itemtype="http://schema.org/LocalBusiness">
+			<div class="footer-map">
+				<div class="container">
+					<div class="row footer-box mb-3">
+						<div class="col-sm-12 col-md-6 pb-4">
+							<h5>Menu</h5>
+							<div class="row">
+								<div class="col-sm-6 col-md-12 col-lg-5">
+									<ul class="my-0">
+										<li><a href=""><i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+												Home</a></li>
+										<li><a href=""><i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+												Administrator session</a></li>
+										<li><a href=""><i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
+												User session</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-6 col-md-12 col-lg-7">
+									<ul class="my-0">
+										<h5>Development team</h5>
+										<li><a href="page: Dr Placer"><i class="fas fa-chevron-circle-right"
+													aria-hidden="true"></i> Axel Mondragon </a></li>
+										<li><a href="page: ChaloMD8"><i class="fas fa-chevron-circle-right"
+													aria-hidden="true"></i> Gonzalo Morales</a></li>
+										<li><a href="page: XxAlexBrxX"><i class="fas fa-chevron-circle-right"
+													aria-hidden="true"></i> Jeremy Briones</a></li>
+										<li><a href="page: JonnyCH30"><i class="fas fa-chevron-circle-right"
+											aria-hidden="true"></i> Jonny Briones</a></li>
+										<li><a href="page: ReyYR02"><i class="fas fa-chevron-circle-right"
+													aria-hidden="true"></i> Reymond Rodríguez</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6 pb-4">
+							<h5>KND Parking</h5>
+							<div class="row">
+								<div class="col-sm-6 col-md-12 col-lg-5">
+									<div class="media mb-3">
+										<i class="fas fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+										<div class="pl-2">
+											<p class="media-body">
+												<strong class="d-block">Phone</strong>
+												<span itemprop="telephone"><i class="fas fa-chevron-circle-right"
+														aria-hidden="true"></i> <a
+														href="tel:+506-7203-4492">+506-7203-4492</a></span>
+											</p>
+										</div>
+									</div>
+
+									<div class="media mb-3">
+										<i class="text-success fab fa-whatsapp fa-lg fa-fw" aria-hidden="true"></i>
+										<div class="pl-2">
+											<p class="media-body mb-2">
+												<strong class="d-block">Whatsapp</strong>
+												<i class="fas fa-chevron-circle-right" aria-hidden="true"></i> <a
+													href="https://api.whatsapp.com/send?phone=50672034492"
+													target="_blank">50672034492</a>
+											</p>
+										</div>
+									</div>
+
+									<div class="media mb-3">
+										<i class="fas fa-exchange-alt fa-lg fa-fw" aria-hidden="true"></i>
+										<div class="pl-2">
+											<p class="media-body mb-2">
+												<strong class="d-block"> Sale</strong>
+												Selling: ₡612.89 / US$<br>
+												Buying: ₡607.84 / US$
+											</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-12 col-lg-7">
+									<div class="media mb-3">
+										<i class="fas fa-map-marker-alt fa-lg fa-fw" aria-hidden="true"></i>
+										<div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+											<div class="pl-2">
+												<p class="media-body mb-2">
+													<strong class="d-block">Location</strong>
+													<span itemprop="streetAddress">
+														San José<br>Costa Rica
+
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> <!-- Return top================================================== -->
+			<a href="javascript:" id="return-to-top" style="display: none;"><i class="fas fa-chevron-up"
+					aria-hidden="true"></i></a>
+		</footer>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
