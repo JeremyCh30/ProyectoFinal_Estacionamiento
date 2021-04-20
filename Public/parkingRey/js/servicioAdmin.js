@@ -54,7 +54,7 @@ async function getEstacionamientos() {
                     celdaPlaca.innerHTML = "Disponible";
                     // inicio boton Editar
                     let botonEditar = document.createElement('a');
-                    //botonEditar.href = '#';
+                    botonEditar.href = 'form.html';
                     botonEditar.classList.add('fas');
                     botonEditar.classList.add('fa-pencil-alt'); //con esta clase se le dan los estilos en css
                     botonEditar.classList.add('edit');
