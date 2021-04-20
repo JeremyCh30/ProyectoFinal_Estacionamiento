@@ -155,8 +155,8 @@ async function deleteVehiculo(nuevoId) {
 
 async function Facturacion(){
 
-        let id_estacionamiento = this.dataset.id_estacionamiento;
-        localStorage.setItem('estacionamiento', id_estacionamiento);
-        window.location.href = 'Factura.html';
+    let id_estacionamiento = this.dataset.id_estacionamiento;
+    localStorage.setItem('estacionamiento', id_estacionamiento);
+    window.location.href = 'Factura.html';
         
 }
