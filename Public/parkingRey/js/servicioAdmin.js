@@ -166,7 +166,7 @@ async function CalcularPago(id){
         if(tipoVehiculo == "carro"){
             let montoPagar = thoras*1000;
             alert("El monto a pagar es de: "+ montoPagar)
-        }else{
+        }else {
             let montoPagar = thoras*750;
             alert("El monto a pagar es de: "+ montoPagar)
         }
