@@ -7,10 +7,17 @@ async function getEstacionamientos() {
         method: 'GET'
     };
 
+        //     // El formato americano lo pondrá en AM/PM
+        // console.log(fecha.toLocaleTimeString('en-US'));
+        // // El formato español lo pondrá en un formato 24h
+        // console.log(fecha.toLocaleTimeString('es-ES'));
+
     await fetch("https://localhost:5001/Estacionamientos", opciones)
         .then(response => response.json())
         .then(result => {
-            //console.log(result);
+            hora=new Date();
+            nueva=hora.getHours();
+            //console.log(nueva); obtener hora 
 
             var tbody = document.querySelector('#tblEstacionamientos tbody');
 
@@ -31,11 +38,13 @@ async function getEstacionamientos() {
 
                     //inicio creacion de boton de Facturar
                     let botonFacturar = document.createElement('a');
+                    botonFacturar.href = 'Factura.html';
                     botonFacturar.classList.add('fas');
                     botonFacturar.classList.add('fa-dollar-sign');
                     botonFacturar.classList.add('pay');
                     botonFacturar.setAttribute("title", "Facturar");
-                    botonFacturar.setAttribute("onclick", "CalcularPago("+ resultados.id + ")");
+                    //botonFacturar.setAttribute("onclick", "CalcularPago("+ resultados.id + ")");
+                    botonFacturar.addEventListener('click', Facturacion);
                     botonFacturar.dataset.id_estacionamiento = resultados.id;
                     celdaAcciones.appendChild(botonFacturar);
                 
@@ -54,6 +63,7 @@ async function getEstacionamientos() {
                     //botonEditar.addEventListener('click', mostrarDatosEdicion);
                     celdaAcciones.appendChild(botonEditar); //editar
                     // fin boton Editar
+
                 }
                 
 
@@ -143,35 +153,10 @@ async function deleteVehiculo(nuevoId) {
         });
 }
 
-async function CalcularPago(id){
+async function Facturacion(){
 
-    var opciones = {
-        method: 'GET'
-    };
-
-    fetch("https://localhost:5001/Estacionamientos", opciones)
-    .then(response => response.json()) //Convierto el resultado
-    .then(resultados => {
-        //console.log(resultados);
-
-        let index=id-1;
-            
-        console.log(resultados[index])
-
-        let entrada = resultados[index].horaDeEntrada;
-        let salida = resultados[index].horaDeSalida;
-        let thoras = salida-entrada;
-        let tipo=resultados[index].vehiculo.tipo;
-        let tipoVehiculo = tipo.toLowerCase();
-        if(tipoVehiculo == "carro"){
-            let montoPagar = thoras*1000;
-            alert("El monto a pagar es de: "+ montoPagar)
-        }else {
-            let montoPagar = thoras*750;
-            alert("El monto a pagar es de: "+ montoPagar)
-        }
-
+        let id_estacionamiento = this.dataset.id_estacionamiento;
+        localStorage.setItem('estacionamiento', id_estacionamiento);
+        window.location.href = 'Factura.html';
         
-    })
-    .catch(error => alert('ha ocurrido un error: ' + error));
 }
