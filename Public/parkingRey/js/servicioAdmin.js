@@ -10,7 +10,7 @@ async function getEstacionamientos() {
     await fetch("https://localhost:5001/Estacionamientos", opciones)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
+            //console.log(result);
 
             var tbody = document.querySelector('#tblEstacionamientos tbody');
 
@@ -23,32 +23,22 @@ async function getEstacionamientos() {
                 let celdaTipo = fila.insertCell();
                 let celdaAcciones = fila.insertCell();
                 
-                if(resultados.vehiculo.placa!=""){
+                if(resultados.vehiculo!=null){
                     celdaLugar.innerHTML = resultados.id;
                     celdaPlaca.innerHTML = resultados.vehiculo.placa;
                     celdaTipo.innerHTML = resultados.vehiculo.tipo;
 
-                    //inicio creacion de boton de eliminar
-                    let botonEliminar = document.createElement('a');
-                    //botonEliminar.href = '#';
-                    botonEliminar.classList.add('fas');
-                    botonEliminar.classList.add('fa-trash-alt');
-                    botonEliminar.classList.add('delete');
-                    botonEliminar.setAttribute("title", "Eliminar");
-                    botonEliminar.dataset.id_estacionamiento = resultados.id;
-                    //botonEliminar.setAttribute("onclick", "deleteEstacionamiento(" + resultados.id + ")");
-                    celdaAcciones.appendChild(botonEliminar);
-                    //fin creacion de boton de eliminar
 
                     //inicio creacion de boton de Facturar
                     let botonFacturar = document.createElement('a');
-                    botonFacturar.href = '#';
                     botonFacturar.classList.add('fas');
                     botonFacturar.classList.add('fa-dollar-sign');
                     botonFacturar.classList.add('pay');
                     botonFacturar.setAttribute("title", "Facturar");
+                    botonFacturar.setAttribute("onclick", "CalcularPago("+ resultados.id + ")");
                     botonFacturar.dataset.id_estacionamiento = resultados.id;
                     celdaAcciones.appendChild(botonFacturar);
+                
                     //fin creacion de boton de Facturar
                 }else{
                     celdaLugar.innerHTML = resultados.id;
@@ -91,7 +81,7 @@ async function getVehiculos() {
     await fetch("https://localhost:5001/Vehiculos", opciones)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
+            //console.log(result);
 
             var tbody = document.querySelector('#tblVehiculos tbody');
 
@@ -103,7 +93,7 @@ async function getVehiculos() {
                 let celdaTipo = fila.insertCell();
                 let celdaAcciones = fila.insertCell();
                 
-                if(resultados.placa!=""){
+                if(resultados!=null){
                     celdaPlaca.innerHTML = resultados.placa;
                     celdaTipo.innerHTML = resultados.tipo;
 
@@ -151,4 +141,37 @@ async function deleteVehiculo(nuevoId) {
         .catch(error => {
             alert('ha ocurrido un error: ' + error)
         });
+}
+
+async function CalcularPago(id){
+
+    var opciones = {
+        method: 'GET'
+    };
+
+    fetch("https://localhost:5001/Estacionamientos", opciones)
+    .then(response => response.json()) //Convierto el resultado
+    .then(resultados => {
+        //console.log(resultados);
+
+        let index=id-1;
+            
+        console.log(resultados[index])
+
+        let entrada = resultados[index].horaDeEntrada;
+        let salida = resultados[index].horaDeSalida;
+        let thoras = salida-entrada;
+        let tipo=resultados[index].vehiculo.tipo;
+        let tipoVehiculo = tipo.toLowerCase();
+        if(tipoVehiculo == "carro"){
+            let montoPagar = thoras*1000;
+            alert("El monto a pagar es de: "+ montoPagar)
+        }else{
+            let montoPagar = thoras*750;
+            alert("El monto a pagar es de: "+ montoPagar)
+        }
+
+        
+    })
+    .catch(error => alert('ha ocurrido un error: ' + error));
 }
