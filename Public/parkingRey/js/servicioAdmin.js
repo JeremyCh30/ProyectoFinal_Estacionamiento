@@ -54,11 +54,11 @@ async function getEstacionamientos() {
                     celdaPlaca.innerHTML = "Disponible";
                     // inicio boton Editar
                     let botonEditar = document.createElement('a');
-                    botonEditar.href = 'form.html';
                     botonEditar.classList.add('fas');
                     botonEditar.classList.add('fa-pencil-alt'); //con esta clase se le dan los estilos en css
                     botonEditar.classList.add('edit');
                     botonEditar.setAttribute("title", "Agregar");
+                    botonEditar.addEventListener('click', AgregarLugar);
                     botonEditar.dataset.id_estacionamiento = resultados.id;
                     //botonEditar.addEventListener('click', mostrarDatosEdicion);
                     celdaAcciones.appendChild(botonEditar); //editar
@@ -158,5 +158,13 @@ async function Facturacion(){
     let id_estacionamiento = this.dataset.id_estacionamiento;
     localStorage.setItem('estacionamiento', id_estacionamiento);
     window.location.href = 'Factura.html';
+        
+}
+
+async function AgregarLugar(){
+
+    let id_estacionamiento = this.dataset.id_estacionamiento;
+    localStorage.setItem('estacionamiento', id_estacionamiento);
+    window.location.href = 'formulario.html';
         
 }
