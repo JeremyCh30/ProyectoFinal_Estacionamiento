@@ -22,13 +22,13 @@ function getEstacionamiento() {
                 let idLugar = resultados[index].id;
                 let fecha = new Date();
                 let hora = fecha.getHours();
-                let placa = inputPlaca.value;
+                plac = inputPlaca.value;
+                let placa = plac.toUpperCase();
                 let tipo = inputTipo.value;
                 let tipoV = tipo.toLowerCase();
 
-                //alert(idLugar+", "+hora)//+", "+pplaca+", "+tipo+", "+tipoV);
                 putEstacionamiento(idLugar, hora, placa, tipoV)
-                //window.location.href = 'admin.html';
+                window.location.href = 'admin.html';
 
 
             } else {
@@ -41,7 +41,7 @@ function getEstacionamiento() {
 }
 
 async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
-    alert(pidLugar + ", " + phora + ", " + pplaca + ", " + ptipoV);
+    alert("Se agregó el Vehiculo en el lugar seleccionado");
 
     var estacionamientoEditar = {
         "id": +pidLugar,

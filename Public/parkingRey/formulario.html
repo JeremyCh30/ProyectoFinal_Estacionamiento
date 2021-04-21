@@ -912,6 +912,29 @@
 			}
 		}
 
+		/* */
+		input{
+			width: 350px;
+		}
+		#divPlaca, #divTipo p{
+			color: #FFF;
+			font-size: 24px;
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		#btnSubmit{
+			margin-top: 60px;
+			margin-bottom: 150px;
+			width: 120px;
+			color: #FFF;
+			background-color: #036;
+			margin-left: 230px;
+		}
+		#btnSubmit:hover{	
+			background-color: #000000;
+		}
+		/* */
 		.section-white-wave {
 			width: 100%;
 			padding: 3.5em 0 5em;
@@ -977,66 +1000,16 @@
 			<div class="container">
 				<!-- Contact form
 		================================================== -->
-				<div class="section-y">
-					<div class="container" id="contacto">
-						<div class="col-md-12 col-lg-7">
-							<div id="contactForm ">
-								<form id="formContacto" action="" novalidate>
-									<div class="contact_input_area">
-										<div class="row">
-											<div class="col-12 messages-box">
-												<div id="statusBox">
-													<div class="alert alert-info d-block"><i
-															class="fad fa-user-tie fa-lg"></i> Complete el siguiente
-														formulario:</div>
-												</div>
-											</div>
-											<div class="col-md-12 col-lg-12">
-												
-											</div>
-											<div class="col-md-12 col-lg-6">
-												<div class="form-group">
-													<p class="parque">Placa del vehículo</p>
-													<input type="text" class="form-control" name="PlacaVehículo"
-														id="placa" placeholder="Placa del vehículo" value=""
-														required>
-													<div class="invalid-feedback inputEmail">Por favor indique la placa del vehículo</div>
-												</div>
-											</div>
-											<div class="col-md-12 col-lg-6">
-												<div class="form-group">
-													<p class="parque">Tipo de vehículo</p>
-													<input type="text" class="form-control" name="TipoVehiculo"
-														id="tipo" placeholder="Tipo de vehículo" value="" required>
-													<div class="invalid-feedback inputTelefono">Por favor indique el tipo de vehículo</div>
-												</div>
-											</div>
-											<div class="col-md-12 col-lg-12">
-												<div class="row">
-													<div class="col-12 col-sm-12 col-md-7 col-lg-12 col-xl-7">
-														<div class="form-group">
-															<div id="recaptcha" class="g-recaptcha"
-																data-sitekey="6LctiyYTAAAAAHmnamEgqzV56c7wiBpdr9IJmehk"
-																data-callback="vcc"></div>
-															<div class="inputCaptcha d-none">¡Debe marcar la casilla de
-																recaptcha!</div>
-														</div>
-													</div>
-													<div class="col-12 col-sm-12 col-md-5 col-lg-12 col-xl-5">
-														<button id="btnSubmit" type="submit"
-															class="btn-cta btn-cta-black1 mt-3"><i
-																class="fas fa-arrow-right"></i> Enviar ahora</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-							<div id="successMsg"></div>
-						</div>
-					</div>
-				</div>
+		<div id="divPlaca">
+			<p>Ingrese la placa</p>
+			<input type="text" id="placa">
+		</div>
+		<div id="divTipo">
+			<p>Ingrese el tipo</p>
+			<input type="text" id="tipo">
+		</div>
+				
+				<button id="btnSubmit" type="button">Agregar</button>
 			</div>
 		</div>
 
