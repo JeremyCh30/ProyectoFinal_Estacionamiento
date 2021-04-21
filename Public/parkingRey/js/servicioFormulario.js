@@ -41,7 +41,7 @@ function getEstacionamiento() {
 }
 
 async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
-    alert("Se agregó el Vehiculo en el lugar seleccionado");
+    alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
 
     var estacionamientoEditar = {
         "id": +pidLugar,
