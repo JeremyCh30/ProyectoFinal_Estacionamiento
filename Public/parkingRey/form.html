@@ -938,6 +938,7 @@
 	<!-- InstanceEndEditable -->
 	<link rel="stylesheet" href="./css/mc-bootstrap.min.css" media="screen">
 	<link type="text/css" rel="stylesheet" charset="UTF-8" href="./css/translateelement.css">
+	<script src="../parkingRey/js/fromPUT.js"></script>
 </head>
 
 <body>
@@ -945,7 +946,7 @@
 		<nav class="navbar navbar-expand-custom navbar-custom fixed-top bg-custom">
 			<div class="container">
 				<a class="navbar-brand" href="ingles.html">
-					<img src=./imagenes/KND.png"
+					<img src="./imagenes/KND.png"
 						class="logo" width="105" height="40" alt="Ir a la Página de Inicio"
 						title="Ir a la Página de Inicio">
 				</a>
@@ -1006,7 +1007,7 @@
 											<div class="col-md-12 col-lg-6">
 												<div class="form-group">
 													<p class="parque">Placa del vehículo</p>
-													<input type="text" class="form-control" name="plate of vehicle"
+													<input id="placa" type="text" class="form-control" name="plate of vehicle"
 														id="PlacaVehículo" placeholder="plate of vehicle" value=""
 														required>
 													<div class="invalid-feedback inputEmail">Please indicate the plate of vehicle</div>
@@ -1015,7 +1016,7 @@
 											<div class="col-md-12 col-lg-6">
 												<div class="form-group">
 													<p class="parque">Type of vehicle</p>
-													<input type="text" class="form-control" name="TipoVehiculo"
+													<input id="tipo" type="text" class="form-control" name="TipoVehiculo"
 														id="Type of vehicle" placeholder="Type of vehicle" value="" required>
 													<div class="invalid-feedback inputTelefono">Please indicate the type of vehicle</div>
 												</div>
@@ -1023,7 +1024,7 @@
 											<div class="col-md-12 col-lg-12">
 												<div class="row">
 													<div class="col-12 col-sm-12 col-md-5 col-lg-12 col-xl-5">
-														<button id="btnSubmit" type="submit"
+														<button onclick="actualizarEstacionamiento()" id="btnSubmit" type="submit"
 															class="btn-cta btn-cta-black1 mt-3"><i
 																class="fas fa-arrow-right"></i> Send now</button>
 													</div>
