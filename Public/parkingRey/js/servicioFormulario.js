@@ -28,7 +28,7 @@ function getEstacionamiento() {
                 let tipoV = tipo.toLowerCase();
 
                 putEstacionamiento(idLugar, hora, placa, tipoV)
-                window.location.href = 'admin.html';
+                window.location.href = 'Admin.html';
 
 
             } else {
@@ -41,7 +41,7 @@ function getEstacionamiento() {
 }
 
 async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
-    alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
+    alert("Se agregó el vehiculo al lugar de estacionamiento seleccionado");
 
     var estacionamientoEditar = {
         "id": +pidLugar,
