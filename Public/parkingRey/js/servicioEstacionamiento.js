@@ -22,7 +22,7 @@ async function getEstacionamientos() {
                     disponible.classList.add('disp'); 
                     let icono=document.createElement('i');
                     icono.classList.add('fas');
-                    icono.classList.add('fa-car');
+                    icono.classList.add('fa-parking');
                     disponible.appendChild(icono);
                     contenedor.appendChild(disponible);
                 }else{
@@ -31,7 +31,7 @@ async function getEstacionamientos() {
                     ocupado.classList.add('ocup'); 
                     let icono=document.createElement('i');
                     icono.classList.add('fas');
-                    icono.classList.add('fa-ban');
+                    icono.classList.add('fa-parking-slash');
                     ocupado.appendChild(icono);
                     contenedor.appendChild(ocupado);
                 }
