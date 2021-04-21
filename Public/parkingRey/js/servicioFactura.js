@@ -1,5 +1,6 @@
 let id = localStorage.getItem('estacionamiento');
 let index = id - 1;
+let btnFacturar= document.querySelector('#btnFacturar');
 
 getFacturas();
 
@@ -20,12 +21,23 @@ async function getFacturas() {
             spanPlaca.innerHTML = placa;
 
             let entrada = resultados[index].horaDeEntrada;
-            let salida = resultados[index].horaDeSalida;
+            let fecha = new Date();
+            let salida = fecha.getHours();
+
+            //let salida = resultados[index].horaDeSalida;
             let thoras = salida - entrada;
             let spanHoras = document.getElementById('horas');
             let tipo = resultados[index].vehiculo.tipo;
             spanHoras.innerHTML = thoras;
             let tipoVehiculo = tipo.toLowerCase();
+
+            //inicio
+            let idFactura=resultados[index].id;
+            //putEstacionamiento(idFactura)
+
+            //fin
+
+
             if (tipoVehiculo == "carro") {
                 let montoPagar = thoras * 1000;
                 let spanPHora = document.getElementById('phoras');
