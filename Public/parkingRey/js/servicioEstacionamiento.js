@@ -19,19 +19,19 @@ async function getEstacionamientos() {
                 if(resultados.vehiculo!=null){
                     let disponible = document.createElement('div');
                     disponible.classList.add('tarjeta');
-                    disponible.classList.add('disp'); 
+                    disponible.classList.add('ocup'); 
                     let icono=document.createElement('i');
                     icono.classList.add('fas');
-                    icono.classList.add('fa-parking');
+                    icono.classList.add('fa-parking-slash');
                     disponible.appendChild(icono);
                     contenedor.appendChild(disponible);
                 }else{
                     let ocupado = document.createElement('div');
                     ocupado.classList.add('tarjeta');
-                    ocupado.classList.add('ocup'); 
+                    ocupado.classList.add('disp'); 
                     let icono=document.createElement('i');
                     icono.classList.add('fas');
-                    icono.classList.add('fa-parking-slash');
+                    icono.classList.add('fa-parking');
                     ocupado.appendChild(icono);
                     contenedor.appendChild(ocupado);
                 }
