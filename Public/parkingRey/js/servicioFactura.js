@@ -26,16 +26,15 @@ async function getFacturas() {
 
             //let salida = resultados[index].horaDeSalida;
             let thoras = salida - entrada;
+            if(thoras==0){
+                thoras=1;
+            }
             let spanHoras = document.getElementById('horas');
             let tipo = resultados[index].vehiculo.tipo;
             spanHoras.innerHTML = thoras;
             let tipoVehiculo = tipo.toLowerCase();
 
-            //inicio
-            let idFactura=resultados[index].id;
-            //putEstacionamiento(idFactura)
-
-            //fin
+            
 
 
             if (tipoVehiculo == "carro") {

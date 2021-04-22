@@ -8,13 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>El Parqueo S.A</title>
-    <link rel="shortcut icon"
-        href="./imagenes/KND.png" />
+    <link rel="shortcut icon" href="./imagenes/KND.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="manifest" href="">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage"
-        content="./imagenes/KND.png">
+    <meta name="msapplication-TileImage" content="./imagenes/KND.png">
     <meta name="theme-color" content="#0A0506">
     <style>
         *,
@@ -1076,6 +1074,20 @@
             float: right;
             width: 40%;
         }
+
+        /* */
+		input{
+			width: 350px;
+            height: 35px;
+            border-radius: 10px;
+		}
+        #divUser, #divPass p{
+            font-size: 24px;
+            color:#FFF;
+            margin-top: 30px;
+        }
+		
+		/* */
     </style>
     <!-- InstanceBeginEditable name="head" -->
     <!-- InstanceEndEditable -->
@@ -1088,8 +1100,7 @@
         <nav class="navbar navbar-expand-custom navbar-custom fixed-top bg-custom">
             <div class="container">
                 <a class="navbar-brand" href="espaniol.html">
-                    <img src="./imagenes/KND.png"
-                        class="logo" width="105" height="40" alt="Ir a la Página de Inicio"
+                    <img src="./imagenes/KND.png" class="logo" width="105" height="40" alt="Ir a la Página de Inicio"
                         title="Ir a la Página de Inicio">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
@@ -1122,41 +1133,25 @@
         <div class="container text-center">
             <i class="fas fa-user-tie fa-10x mr-5 text-white"></i>
         </div>
-        <div class="">
-            <div class="">
-                <img src="./imagenes/KND.png" class="img-fluid" />
-            </div><br><br><br>
+        <div class=""><br><br><br>
             <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4 container">
                 <h1 class="font-weight-bold mb-4 ">Bienvenido</h1>
-                <form class="mb-5">
-                    <div class="mb-4">
-                        <label for="exampleInputEmail1" class="form-label font-weight-bold parque">Email</label>
-                        <input type="email" class="form-control border-0" id="exampleInputEmail1"
-                            placeholder="Ingresa tu email" aria-describedby="emailHelp">
+                <div class="mb-5">
+                    <div id="divUser">
+                        <p>Usuario</p>
+                        <input type="text" id="user">
                     </div>
-                    <div class="mb-4">
-                        <label for="exampleInputPassword1" class="form-label font-weight-bold parque">Contraseña</label>
-                        <input type="password" class="form-control  border-0 mb-2" placeholder="Ingresa tu contraseña"
-                            id="exampleInputPassword1">
-                        <a href="" id="emailHelp" class="form-label font-weight-bold parque">¿Has olvidado tu
-                            contraseña?</a>
+                    <div id="divPass">
+                        <p>Contraseña</p>
+                        <input type="password" id="pass">
                     </div>
-                    <a href="admin.html" class="btn-cta btn-cta-black1 mt-4">Iniciar sesión</a>
-                </form>
-                <p class="form-label font-weight-bold parque" align="center">Inicia sesión con</p>
-                <div class="d-flex justify-content-around">
-                    <button type="button" class="btn-ctag btn-cta-blackg mt-4"><i class="fab fa-google lead mr-2"></i>
-                        Google</button>
-                    <button type="button" class="btn-ctaf btn-cta-blackf mt-4"><i
-                            class="fab fa-facebook-f lead mr-2"></i> Facebook</button>
+                    <button class="btn-cta btn-cta-black1 mt-4" id="btnIniciar">Iniciar
+                        sesión</button>
                 </div>
-            </div>
-            <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 mt-auto w-100">
-                <p class="form-label font-weight-bold parque">¿Todavia no tienes una cuenta?</p> <a href="#"
-                    class="text-light font-weight-bold text-decoration-none">Crea una ahora</a>
-            </div>
+                </div>
         </div>
     </div>
+    <script src="js/servicioLogin.js"></script>
 </body>
 
 </html>
