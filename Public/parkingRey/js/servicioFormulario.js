@@ -41,7 +41,7 @@ function getEstacionamiento() {
 }
 
 async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
-    alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
+    //alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
 
     var estacionamientoEditar = {
         "id": +pidLugar,
@@ -69,8 +69,8 @@ async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
     fetch("https://localhost:5001/Estacionamientos", opciones)
         .then(response => response.text())
         .then(result => {
-            alert("se agrego: "+result);
-            
+            alert("Se agregó el vehículo el en espacio seleccionado");
+            window.location.href = 'Admin.html';
         })
         .catch(error => console.log('error: ' + error));
 }
