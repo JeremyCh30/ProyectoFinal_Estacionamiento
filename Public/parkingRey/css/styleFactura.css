@@ -2,3 +2,9 @@
 .table, th, td{
   border: 1px solid black;
 }
+ .btnFac{
+  border-radius: 5px;
+}
+.btnFac:hover{
+  font-weight: bold;
+}

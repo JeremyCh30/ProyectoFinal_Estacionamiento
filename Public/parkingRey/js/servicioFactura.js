@@ -18,6 +18,9 @@ async function getFacturas() {
 
             let spanPlaca = document.getElementById('placa');
             let placa = resultados[index].vehiculo.placa;
+            if(placa==null){
+                window
+            }
             spanPlaca.innerHTML = placa;
 
             let entrada = resultados[index].horaDeEntrada;
@@ -57,5 +60,38 @@ async function getFacturas() {
             }
 
         })
-        .catch(error => alert('ha ocurrido un error: ' + error));
+        .catch(error => console.log('ha ocurrido un error: ' + error));
 }
+
+async function delEstacionamiento() {
+    //alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
+
+    var estacionamientoEditar = {
+        "id": +id,
+        "horaDeEntrada": 0,
+        "numeroPosicion": +id,
+        "horaDeSalida": 0,
+        "cobro": 0
+    }
+    var valoresAGuardar = JSON.stringify(estacionamientoEditar);
+
+    var encabezado = {
+        'Content-Type': 'application/json'
+    }
+
+    var opciones = {
+        method: 'PUT',
+        headers: encabezado,
+        body: valoresAGuardar
+    };
+
+    fetch("https://localhost:5001/Estacionamientos", opciones)
+        .then(response => response.text())
+        .then(result => {
+            alert("Se ha facturado el vehículo");
+            window.location.href = 'Admin.html';
+        })
+        .catch(error => console.log('error: ' + error));
+}
+
+btnFacturar.addEventListener('click', delEstacionamiento)
