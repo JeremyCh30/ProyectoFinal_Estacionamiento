@@ -1128,7 +1128,7 @@
             </div><br><br><br>
             <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4 container">
                 <h1 class="font-weight-bold mb-4 ">Bienvenido</h1>
-                <form class="mb-5">
+                <form class="mb-5" onsubmit="return validacion()">
                     <div class="mb-4">
                         <label for="exampleInputEmail1" class="form-label font-weight-bold parque">Email</label>
                         <input type="email" class="form-control border-0" id="exampleInputEmail1"
@@ -1138,10 +1138,10 @@
                         <label for="exampleInputPassword1" class="form-label font-weight-bold parque">Contraseña</label>
                         <input type="password" class="form-control  border-0 mb-2" placeholder="Ingresa tu contraseña"
                             id="exampleInputPassword1">
-                        <a href="" id="emailHelp" class="form-label font-weight-bold parque">¿Has olvidado tu
+                        <a id="emailHelp" class="form-label font-weight-bold parque">¿Has olvidado tu
                             contraseña?</a>
                     </div>
-                    <a href="admin.html" class="btn-cta btn-cta-black1 mt-4">Iniciar sesión</a>
+                    <button  class="btn-cta btn-cta-black1 mt-4">Iniciar sesión</button>
                 </form>
                 <p class="form-label font-weight-bold parque" align="center">Inicia sesión con</p>
                 <div class="d-flex justify-content-around">
@@ -1157,6 +1157,7 @@
             </div>
         </div>
     </div>
+    <script src="js/servicioLogin.js"></script>
 </body>
 
 </html>

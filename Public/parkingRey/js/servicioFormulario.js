@@ -28,7 +28,7 @@ function getEstacionamiento() {
                 let tipoV = tipo.toLowerCase();
 
                 putEstacionamiento(idLugar, hora, placa, tipoV)
-                window.location.href = 'admin.html';
+                // window.location.href = 'admin.html';
 
 
             } else {

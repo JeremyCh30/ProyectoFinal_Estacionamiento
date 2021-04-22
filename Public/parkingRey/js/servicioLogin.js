@@ -1,4 +1,4 @@
-getAdministrador();
+/*getAdministrador();
 
 let inputEmail=document.querySelector('#exampleInputEmail1');
 let inputPass=document.querySelector('#pass');
@@ -25,4 +25,23 @@ async function getAdministrador() {
 
         })
         .catch(error => alert('ha ocurrido un error: ' + error));
-}
+}*/
+var email="rey161509@gmail.com";
+var pass="KND.cuatro";
+let inputEmail=document.querySelector("#exampleInputEmail1");
+let inputPass=document.querySelector("#pass");
+function validacion() {
+    if (inputEmail.value==email) {
+      // Si no se cumple la condicion...
+      alert('Ingrese email correcto');
+      return false;
+    }
+    else if (inputPass.value==pass) {
+      // Si no se cumple la condicion...
+      alert('Ingrese contraseña valida');
+      return false;
+    }
+    // Si el script ha llegado a este punto, todas las condiciones
+    // se han cumplido, por lo que se devuelve el valor true
+    return true;
+  }
