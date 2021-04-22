@@ -28,7 +28,7 @@ function getEstacionamiento() {
                 let tipoV = tipo.toLowerCase();
 
                 putEstacionamiento(idLugar, hora, placa, tipoV)
-                // window.location.href = 'admin.html';
+                //window.location.href = 'Admin.html';
 
 
             } else {
@@ -41,7 +41,7 @@ function getEstacionamiento() {
 }
 
 async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
-    alert("Se agregó el vehiculo al lugar de estacionamiento seleccionado");
+    //alert(pidLugar+", "+phora+", "+pplaca+", "+ptipoV);
 
     var estacionamientoEditar = {
         "id": +pidLugar,
@@ -66,11 +66,11 @@ async function putEstacionamiento(pidLugar, phora, pplaca, ptipoV) {
         body: valoresAGuardar
     };
 
-    fetch("http://localhost:5000/Estacionamientos", opciones)
+    fetch("https://localhost:5001/Estacionamientos", opciones)
         .then(response => response.text())
         .then(result => {
-            alert("se agrego: "+result);
-            
+            alert("Se agregó el vehículo el en espacio seleccionado");
+            window.location.href = 'Admin.html';
         })
         .catch(error => console.log('error: ' + error));
 }
